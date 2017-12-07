@@ -1,0 +1,28 @@
+Készítsd el az alábbi oldalt, segítségül megkapod a struktúrát néhány
+gondolattal előre elkészítve. Minimális design elég, ne azzal menjen
+el az időd.
+
+Ez egy olyan oldal, ahol a SzívességMester a szabadidejét versenyezteti,
+hogy a legjobb szívességeket teljesíthesse.
+
+Az oldal két nézetből áll:
+1) timeTableView - itt látható a SzívességMester naptára, ahol a
+felhasználó kiválaszthat egy időpontot, megadhatja a nevét és egy
+rövid szöveges mezőben kifejtheti, hogy milyen szívességre van
+szüksége. Az elküldés hatására az oldal ezt elmenti.
+A beküldött szívességek ezen a felületen nem jelennek meg.
+
+2) selectBidTableView - ezt az oldalt a Mester nézi, és minden
+adott időpontra ki tudja választani, hogy melyik kért szívesség
+számára a legszimpatikusabb, amit elintézne. Ez különböző színnel,
+háttérrel jelenik meg a többi között.
+
+Adatbázis:
+Két táblára van szükség:
+
+1) Rendelkezésre álló időpontok (timeslots: id, day, from, until).
+Melyik nap (év napja, pl. dec 7.), mikortól meddig (óó:pp-óó:pp).
+
+2) Szívességajánlatok (bids: id, timeslot, who, what, isSelected)
+Melyik időpontra, ki, milyen szívességet kért, és az végül ki lett-e
+választva.
